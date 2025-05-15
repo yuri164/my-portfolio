@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+  position:relative;
+  overflow-x: hidden;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  margin-top: 4rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+/* スクロール演出つきの全セクション共通 */
+.section {
+  opacity: 0;
+  transform: translate(-150px, -100px) rotate(-15deg);
+  transition: all 1.2s ease-out;
+  padding: 150px 20px;
+  font-size: 3rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0);
+}
+
+/* セクションタイトル */
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f6f6f6;
+  text-align: center;
+}
+
+/* Aboutセクション内のテキスト配置とスタイル */
+.about {
+  text-align: center;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about .tagline {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.about .description {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.works {
+  text-align: center;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.works-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.work {
+  margin-bottom: 3rem;
+}
+
+.work h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #f0f0f0;
+}
+
+.work-description {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+.work img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+
+
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+}
